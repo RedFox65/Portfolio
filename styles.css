@@ -5,11 +5,16 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none !important;
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    background-image: url("multimedias/images/village-cauterets.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* font-family: 'Arial', 'sans-serif'; */
+    font-weight: normal;
     font-size: 16px;
     background-color: #FFFFFF;
     color: #000000;
@@ -17,17 +22,49 @@ body {
 }
 
 a {
-    text-decoration: none;
     color: inherit;
 }
 
 img {
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
+}
+
+h1::before, h1::after, h3::before, h3::after {
+    content: " ~ ";
 }
 
 
 /* NAV BAR */
+
+@keyframes rotationFleche {
+    0% {
+      transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(45deg);
+    }
+    100%{
+      transform: rotate(90deg);
+    }
+}
+
+
+@keyframes apparitionSousMenu {
+    0% {
+        overflow: visible;
+        opacity: 0;
+    }
+    33% {
+        overflow: visible;
+        opacity: 0.33;
+    }
+    100% {
+        overflow: visible;
+        opacity: 1;
+    }
+}
+
 
 nav {
     display: flex;
@@ -35,6 +72,7 @@ nav {
     position: sticky;
     top: 0;
     background-color: #FFFFFF;
+    height: 48px;
 }
 
 nav > a {
@@ -52,56 +90,6 @@ nav > ul {
     align-items: center;
     list-style: none;
     gap: 20px;
-}
-
-
-
-.menu-deroulant > a:after{
-    content: '❯';
-    font-size: 14px;
-    margin-left: 7px;
-    display: inline-block;
-}
-
-
-.sous-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    text-align: center;
-    margin: 30px 0 0 0;
-    overflow: hidden;
-    max-height: 0;
-    list-style: none;
-}
-
-
-.menu-deroulant:hover > .sous-menu {
-    overflow: visible;
-}
-
-
-.sous-menu > li {
-    margin-left: 2.5px;
-    /* margin-top: 5px; */
-}
-
-
-.sous-menu > li > a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-    padding: 10px 12px;
-    font-size: 14px;
-    border-radius: 7px;
-    border-style: double;
-    border-color: #000000;
-}
-
-
-.sous-menu > li:hover > a {
-    background-color: #f0f0f0;
 }
 
 
@@ -135,6 +123,103 @@ nav > ul > li > a > img {
     width: 10%;
 }
 
+
+.menu-deroulant > a:after{
+    content: '❯';
+    font-size: 14px;
+    margin-left: 7px;
+    display: inline-block;
+}
+
+
+.sous-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    margin: 30px 0 0 0;
+    overflow: hidden;
+    max-height: 0;
+    list-style: none;
+}
+
+
+.menu-deroulant:hover > a::after {
+    animation: rotationFleche 0.2s linear forwards;
+}
+
+
+.menu-deroulant:hover > .sous-menu {
+    /* overflow: visible; */
+    animation: apparitionSousMenu .3s linear forwards;
+}
+
+
+.sous-menu > li {
+    margin-left: 2.5px;
+    /* margin-top: 5px; */
+}
+
+
+.sous-menu > li > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    height: 30px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border-radius: 7px;
+    border-style: double;
+    border-color: #000000;
+}
+
+
+.sous-menu > li:hover > a {
+    background-color: #f0f0f0;
+}
+
+
+.spacer-menu {
+    height: 48px;
+}
+
 /* HEADER */
 
+header {
+    margin-top: 15em;
+    text-align: center;
+}
+
+
+header > h1{
+    font-size: 80px;
+    font-style: italic;
+    color: #FFFFFF;
+    text-shadow: 4px 3px #000000;
+}
+
+
+header > h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(220, 220, 220, 0.6);
+    font-family: monospace;
+    font-size: 26px;
+    font-weight: bolder;
+    width: 57%;
+    height: 2em;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5em;
+    padding: 5px 0;
+}
+
 /* MAIN */
+
+main {
+    background-color: #FFFFFF;
+    margin-top: 15.2em;
+}
