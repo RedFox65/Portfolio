@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
         <title>Portfolio | Clément Coirier</title>
     </head>
 
@@ -47,43 +48,54 @@
                 
                 <div>
                     <ul>
-                        <li tabindex="0">Présentation</li>
-                        <li tabindex="1">Langues</li>
-                        <li tabindex="2">Soft skills</li>
-                        <li tabindex="3">Passions</li>
+                        <li data-target="presentation" class="active">Présentation</li>
+                        <li data-target="langues">Langues</li>
+                        <li data-target="softskills">Soft skills</li>
+                        <li data-target="passions">Passions</li>
                     </ul>
 
-                    <article id="presentation">
+                    <article id="presentation" class="active">
                         <p>
                             Actuellement en Brevet Universitaire Technologique (BUT) développeur informatique multisupports, je suis un jeune étudiant souhaitant se spécialiser dans le développement web, d'applications et toute la partie cybersécurité. 
                             J’oriente mes études dans ces domaines, guidé par mon désir d'apprendre et ma curiosité. J'aime beacoup le côté projet de mes études et assez régulièrement je me crée des projets personnels, dans le but d'augmenter en compétences et de me lancer des défis.
                         </p>
                         <p>
                             Avec l'arrivée de l'intelligence artificelle, notre principale tâche n'est plus de concevoir des sites web ou des applications, mais également de les maintenir à jour tou en étant soucieux de l'experience utilisateur, ce dont l'intelligence artificielle peine encore. 
-                            La cybersécurité change notre quotidien, elle y prend une place de plus en plus importante.
+                            <br>La cybersécurité change notre quotidien, elle y prend une place de plus en plus importante.
                         </p>
                         <p>
                             Si vous souhaitez en apprendre plus sur moi, ou me contacter, n'hésitez plus, vous pouvez explorer ce site ou télécharger mon CV !
                         </p>
                     </article>
 
-                    <!-- <article id="langues">
-                        <p>
-                            
-                        </p>
+                    <article id="langues">
+                        <div>
+                            <div>
+                                <img src="multimedias/images/france.png" alt="drapeau français" title="drapeau français">
+                                <p>
+                                    FR
+                                </p>
+                            </div>
+                            <div>
+                                <img src="multimedias/images/angleterre.png" alt="drapeau anglais" title="drapeau anglais">
+                                <p>
+                                    EN
+                                </p>
+                            </div>
+                        </div>
                     </article>
                     
-                    <article id="softs-skills">
+                    <article id="softskills">
                         <p>
 
                         </p>
                     </article>
                     
-                    <article id="passions">
+                    <article id="passions" >
                         <p>
 
                         </p>
-                    </article> -->
+                    </article>
                 </div>
             </section>
 

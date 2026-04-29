@@ -65,6 +65,7 @@ h2 {
 h3 {
     font-family: "MeriendaOne-Regular";
     font-size: 40px;
+    margin-left: 1em;
 }
 
 
@@ -72,6 +73,9 @@ h1::before, h1::after, h3::before, h3::after {
     content: " ~ ";
     color: darkgrey;
 }
+
+
+
 
 
 /* NAV BAR */
@@ -292,27 +296,6 @@ main {
 }
 
 
-#a-propos > div > ul > li:hover {
-    background-color: #F0F0F0;
-}
-
-
-#a-propos > div > ul > li:focus  {
-    border-color: #000000;
-}
-
-
-#a-propos > div > article {
-    background-color: #F0F0F0;
-    width: 65%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 15px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px 10px #F0F0F0;
-}
-
-
 #a-propos > div > article > p {
     text-align: justify;
     margin: 4px;
@@ -320,3 +303,40 @@ main {
 }
 
 
+#a-propos > div > ul > li:hover {
+    background-color: #F0F0F0;
+}
+
+
+#a-propos article {
+    display: none;
+    background-color: #F0F0F0;
+    width: 65%;
+    margin: 0 10px 15px 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 10px #F0F0F0;
+}
+
+
+#a-propos li.active {
+  border: 2px solid black;
+}
+
+
+#a-propos article.active {
+  display: block;
+}
+
+
+#langues > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 1em;
+}
+
+
+#langues > div > div > img {
+    margin-bottom: 1em;
+}
