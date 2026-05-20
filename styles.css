@@ -231,6 +231,7 @@ nav > ul > li > a > img {
     height: 48px;
 }
 
+
 /* HEADER */
 
 header {
@@ -261,6 +262,7 @@ header > h2 {
     padding: 5px 0;
 }
 
+
 /* MAIN */
 
 main {
@@ -269,14 +271,33 @@ main {
 }
 
 
+/* SECTION A-PROPOS */
+
 #a-propos > div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+#a-propos > div > img {
+    width: 15%;
+    height: 0%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #000000;
+    border-radius: 15px;
+    margin: 5em 0 0 5em;
+}
+
+
+#a-propos > div > div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 
-#a-propos > div > ul {
+#a-propos > div ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -285,7 +306,7 @@ main {
 }
 
 
-#a-propos > div > ul > li {
+#a-propos > div ul > li {
     margin: 2px;
     border: solid 3px #F0F0F0;
     border-radius: 20px;
@@ -296,14 +317,14 @@ main {
 }
 
 
-#a-propos > div > article > p {
+#a-propos > div article > p {
     text-align: justify;
     margin: 4px;
     padding: 4px;
 }
 
 
-#a-propos > div > ul > li:hover {
+#a-propos > div ul > li:hover {
     background-color: #F0F0F0;
 }
 
@@ -311,7 +332,8 @@ main {
 #a-propos article {
     display: none;
     background-color: #F0F0F0;
-    width: 65%;
+    width: 781px;
+    height: 289px;
     margin: 0 10px 15px 10px;
     border-radius: 15px;
     box-shadow: 0 0 10px 10px #F0F0F0;
@@ -332,11 +354,150 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     text-align: center;
-    margin-top: 1em;
+    margin-top: 3em;
 }
 
 
 #langues > div > div > img {
     margin-bottom: 1em;
 }
+
+
+#softskills {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+#softskills p {
+    margin-top: 1em !important;
+}
+
+
+#passions {
+
+}
+
+
+/* SECTION COMPÉTENCES */
+
+@keyframes progressBar {
+    0% {
+        background-color: rgba(120, 120, 120, 0);
+        color: rgba(240, 240, 240, 0.5);
+    }
+    50% {
+        background-color: rgba(120, 120, 120, 0.5);
+    }
+    75% {
+        background-color: rgba(120, 120, 120, 0.75);
+        /*color: rgba(255, 255, 255, 0.33);*/
+    }
+    100% {
+        background-color: rgba(120, 120, 120, 1);
+        color: rgba(240, 240, 240, 1);
+    }
+}
+
+
+#competences {
+    background-color: #F0F0F0;
+    border-radius: 0 3em 0 3em;
+}
+
+
+#competences > .spacer-menu {
+    margin-top: 7em;
+}
+
+
+#competences > article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+#competences > article > div {
+    width: 16em;
+    height: 12em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    /*border-radius: 15px;*/
+    /*border-style: solid;*/
+}
+
+
+#competences > article > div > p {
+    background-color: #FFFFFF;
+    padding: 7px 0;
+    text-align: center;
+    font-size: 22px;
+    border-radius: 15px 15px 0 0;
+}
+
+
+#competences > article > div > div {
+    background-color: #FAFAFA;
+    height: 11em;
+}
+
+
+#competences > article > div > div p {
+    background-color: #FAFAFA;
+    padding: 10px 0 10px 15px;
+    font-size: 20px;
+}
+
+
+.progress-bar {
+    padding: 0 5px;
+}
+
+
+.progress-bar:hover {
+    /*border-style: solid;*/
+    border-color: rgb(120, 120, 120);
+}
+
+.progress-bar:hover > p {
+    animation: progressBar 0.4s linear forwards;
+}
+
+
+#competences > article > div > div {
+    border-radius: 0 0 15px 15px;
+}
+
+
+/* PARTIE TEMPORAIRES */
+#competences-temporaires {
+    padding-left: 3em;
+    padding-bottom: 2em;
+}
+
+#competences-temporaires > p {
+    padding-bottom: 1em;
+}
+
+
+/* SECTION DIPLOMES */
+.time-line {
+    background-color: #F0F0F0;
+    display: block;
+    width: 12px;
+    height: 10em;
+    border-radius: 15px 0;
+    margin-top: 2em;
+    margin-left: 42em;
+}
+
+
+/* SECTION PORTFOLIO */
+
+
+/* SECTION CONTACTER */
