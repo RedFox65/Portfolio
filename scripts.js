@@ -124,34 +124,78 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  // ======================
-  // SECTION PORTFOLIO
-  // ======================
+  // =========================
+  // SECTION PORTFOLIO (Filtres + Carrousel)
+  // =========================
   const filtres = document.querySelectorAll(".portfolio-filtres li");
   const cartes = document.querySelectorAll(".portfolio-carte");
+  const grid = document.querySelector(".portfolio-grid");
+  const btnPrev = document.querySelector(".prev-btn");
+  const btnNext = document.querySelector(".next-btn");
+  
+  let currentIndex = 0; // Stocke la position actuelle du carrousel
+  const gap = 20;       // Doit être identique au gap CSS (20px)
 
+  // Fonction magique pour faire glisser le carrousel
+  const majCarrousel = () => {
+    // On ne prend en compte que les cartes qui ne sont pas masquées par le filtre
+    const cartesVisibles = Array.from(cartes).filter(carte => carte.style.display !== "none");
+    
+    // Le défilement max possible est : (total des cartes visibles) - 3
+    const maxIndex = Math.max(0, cartesVisibles.length - 3);
+
+    // Sécurités pour ne pas défiler dans le vide
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    if (currentIndex < 0) currentIndex = 0;
+
+    // Si on a des cartes visibles, on calcule le décalage en pixels
+    if (cartesVisibles.length > 0) {
+      const largeurCarte = cartesVisibles[0].getBoundingClientRect().width;
+      const deplacement = currentIndex * (largeurCarte + gap);
+      grid.style.transform = `translateX(-${deplacement}px)`;
+    } else {
+      grid.style.transform = `translateX(0px)`;
+    }
+  };
+
+  // Fonction pour trier les cartes (modifiée pour inclure le carrousel)
+  const filtrerCartes = (categorie) => {
+    cartes.forEach(carte => {
+      if (carte.classList.contains(categorie)) {
+        carte.style.display = "block";
+      } else {
+        carte.style.display = "none";
+      }
+    });
+    currentIndex = 0; // On revient au début à chaque changement de catégorie
+    majCarrousel();   // Recalcule la position du carrousel
+  };
+
+  // Événements des Filtres
   if (filtres.length > 0 && cartes.length > 0) {
+    const filtreActifAuChargement = document.querySelector(".portfolio-filtres li.active").getAttribute("data-filter");
+    filtrerCartes(filtreActifAuChargement);
+
     filtres.forEach(filtre => {
       filtre.addEventListener("click", () => {
-        
-        // 1. Gérer l'état visuel du menu (classe "active")
         filtres.forEach(f => f.classList.remove("active"));
         filtre.classList.add("active");
-
-        // 2. Récupérer la catégorie cliquée
         const categorie = filtre.getAttribute("data-filter");
-
-        // 3. Afficher ou masquer les cartes
-        cartes.forEach(carte => {
-          if (categorie === "tous" || carte.classList.contains(categorie)) {
-            // On affiche la carte (en block, ou flex si tu as changé le CSS)
-            carte.style.display = "block";
-          } else {
-            // On masque la carte
-            carte.style.display = "none";
-          }
-        });
+        filtrerCartes(categorie);
       });
+    });
+  }
+
+  // Événements des Flèches du Carrousel
+  if (btnPrev && btnNext) {
+    btnPrev.addEventListener("click", () => {
+      currentIndex--; // Recule de 1 projet
+      majCarrousel();
+    });
+
+    btnNext.addEventListener("click", () => {
+      currentIndex++; // Avance de 1 projet
+      majCarrousel();
     });
   }
 

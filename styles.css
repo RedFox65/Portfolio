@@ -17,7 +17,7 @@
 * {
     margin: 0;
     padding: 0;
-    text-decoration: none !important;
+    text-decoration: none;
     box-sizing: border-box;
 }
 
@@ -26,7 +26,6 @@ body {
     background-image: url("multimedias/images/village-cauterets.png");
     background-repeat: no-repeat;
     background-size: 100%;
-    /* font-family: 'Arial', 'sans-serif'; */
     font-weight: normal;
     font-size: 18px;
     background-color: #FFFFFF;
@@ -46,7 +45,6 @@ a {
 
 
 img {
-    /* max-width: 100%; */
     height: auto;
 }
 
@@ -72,11 +70,6 @@ h3 {
 .titre::before, .titre::after {
     content: " ~ ";
     color: darkgrey;
-}
-
-
-span {
-    font-weight: bold;
 }
 
 
@@ -341,9 +334,9 @@ main {
 #a-propos article {
     display: none;
     background-color: #F0F0F0;
-    width: 781px;
-    height: 289px;
-    margin: 0 10px 15px 10px;
+    width: 780px;
+    height: 310px;
+    padding-top: 5px;
     border-radius: 15px;
     box-shadow: 0 0 10px 10px #F0F0F0;
 }
@@ -483,14 +476,44 @@ main {
 
 
 /* PARTIE TEMPORAIRES */
+#titre-competences-temporaires {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #FAFAFA;
+    /*padding-left: 3em;
+    padding-bottom: 2em;*/
+    padding-top: 1em;
+    margin: 10px 3em;
+    border-radius: 15px;
+}
+
+
+#titre-competences-temporaires > p {
+    padding-bottom: 3em;
+}
+
+
 #competences-temporaires {
-    padding-left: 3em;
-    padding-bottom: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 
 #competences-temporaires p {
-    padding-bottom: 1em;
+    padding: 5px;
+    margin-bottom: 2em;
+    border: 1px solid #000000;
+    border-radius: 7px;
+}
+
+
+.spacer-temporaire {
+    height: 50px;
 }
 
 
@@ -577,20 +600,22 @@ main {
 
 .portfolio-grid {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: row;
+    gap: 20px;
     margin-bottom: 5em;
+    transition: transform 0.4s ease-in-out;
+    width: 100%;
 }
 
 
 .portfolio-carte {
-    width: 300px;
+
     background-color: #FAFAFA;
-    /* border: 1px solid #000000; */
     border-radius: 15px;
     overflow: hidden;
     transition: transform 0.2s;
+    flex: 0 0 calc((100% - 40px) / 3); 
+    box-sizing: border-box;
 }
 
 
@@ -607,8 +632,6 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    /* background-color: darkgrey;
-    color: white; */
 }
 
 
@@ -619,13 +642,64 @@ main {
 
 .projet-details {
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
+    justify-content: end;
     margin: 5px 20px 10px 0;
     color: blue;
     padding: 5px;
     cursor: pointer;
 }
+
+
+/* =========================
+   CAROUSEL
+========================= */
+/* Conteneur global (sert de repère absolute pour les flèches) */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Ajuste selon la largeur max de ton site */
+    margin: 0 auto;
+    padding: 0 60px; /* Laisse de la place à gauche/droite pour les flèches */
+}
+
+
+/* La fenêtre de vision */
+.carousel-container {
+    overflow: hidden; /* Cache tout ce qui dépasse des 3 cartes */
+    width: 100%;
+}
+
+
+/* Style des boutons flèches */
+.carousel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centre verticalement par rapport à la carte */
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 5;
+}
+
+
+.carousel-btn:hover {
+    background-color: #FAFAFA;
+    color: #000000;
+    border: 2px solid #000000;
+}
+
+
+/* Positionnement précis à gauche et à droite */
+.prev-btn { left: 0; }
+.next-btn { right: 0; }
 
 
 /* =========================
@@ -816,4 +890,17 @@ main {
 .contact-form input:focus, .contact-form textarea:focus {
     outline: none;
     border-color: #000000;
+}
+
+
+/* =========================
+   FOOTER 
+========================= */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #353535;
+    color: #FFFFFF;
+    height: 100px;
 }
