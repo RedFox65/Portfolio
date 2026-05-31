@@ -34,23 +34,22 @@
         </nav>
 
         <header>
-            <!--<img src="multimedias/images/lac-de-gaube.png">-->
-            <h1>Clément Coirier</h1>
-            <h2>Étudiant Informatique Web et Application</h2>
+            <h1 class="titre">Clément Coirier</h1>
+            <h2>Étudiant en Informatique, Web et Applications</h2>
         </header>
 
         <main>
 
             <section id="a-propos">
                 <div class="spacer-menu"></div>
-                <h3>À propos</h3>
+                <h3 class="titre">À propos</h3>
                 
                 <div>
 
                     <img src="multimedias/images/portrait.jpg" alt="portrait" title="portrait">
 
                     <div>
-                        <ul>
+                        <ul class="a-propos-filtres">
                             <li data-target="presentation" class="active">Présentation</li>
                             <li data-target="langues">Langues</li>
                             <li data-target="softskills">Soft skills</li>
@@ -109,7 +108,7 @@
                                 <br>Cela m'offre également une véritable sensation de liberté.
                             </p>
                             <p>
-                                ~ ??? ~<br><br>???
+                                ~ Sport & Plein Air ~<br><br>Je fais beaucoup de sport ; c'est quelque chose qui est pour moi un moyen de me ressourcer<br> et de garder une bonne condition physique. Cela permet au cerveau d'être plus efficace.
                             </p>
                             <p>
                                 ~ ??? ~<br><br>???
@@ -121,7 +120,7 @@
 
             <section id="competences">
                 <div class="spacer-menu"></div>
-                <h3>Compétences</h3>
+                <h3 class="titre">Compétences</h3>
 
                 <article>
                     <div id="programmation">
@@ -161,54 +160,315 @@
                     </div>
                 </article>
                 <div id="competences-temporaires">
-                    <p>~ Compétence : </p>
-                    <p>~ Compétence : </p>
-                    <p>~ Compétence : </p>
-                    <p>~ Compétence : </p>
-                    <p>~ Compétence : </p>
-                    <p>~ Compétence : </p>
+                    <p><span>Compétences développées en première année de BUT :</span></p>
+                    <p>~ Réaliser un développement d'application</p>
+                    <p>~ Optimiser des applications informatiques</p>
+                    <p>~ Administrer des systèmes informatiques communicants complexes</p>
+                    <p>~ Gérer des données de l'information</p>
+                    <p>~ Conduite de projet</p>
+                    <p>~ Travailler dans une équipe informatique</p>
                 </div>
             </section>
 
             <section id="diplomes">
                 <div class="spacer-menu"></div>
-                <h3>Diplômes</h3>
-                <div>
-                    <span class="time-line"></span>
-
-                    <article>
-                        <p></p>
-                        <span></span>
-                        <p></p>
+                <h3 class="titre">Diplômes</h3>
+                
+                <div class="timeline-container">
+                    <article class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <p class="timeline-date">2025-2026 - Présent</p>
+                        <div class="timeline-content">
+                            <h4>BUT Informatique</h4>
+                            <p>Parcours Réalisation d'applications : conception, développement. Université de Rennes.</p>
+                        </div>
                     </article>
 
-                    <article>
-                        <p></p>
-                        <span></span>
-                        <p></p>
+                    <article class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <p class="timeline-date">2024-2025</p>
+                        <div class="timeline-content">
+                            <h4>Baccalauréat Général</h4>
+                            <p>Spécialités Mathématiques et Numérique et Sciences Informatiques (NSI). Mention Assez Bien.</p>
+                        </div>
                     </article>
                 </div>
             </section>
 
             <section id="portfolio">
                 <div class="spacer-menu"></div>
-                <h3>Portfolio</h3>
+                <h3 class="titre">Portfolio</h3>
 
-                <ul>
-                    <li>Projets personnels</li>
-                    <li>Projets d'études</li>
+                <ul class="portfolio-filtres">
+                    <li class="active" data-filter="tous">Tous</li>
+                    <li data-filter="perso">Projets personnels</li>
+                    <li data-filter="etudes">Projets d'études</li>
                 </ul>
 
-                <article></article>
+                <div class="portfolio-grid">
+                    <article class="portfolio-carte perso">
+                        <div class="portfolio-img-placeholder" style="background-image: url('multimedias/images/village-cauterets.png');"></div>
+                        <h4>Création d'un Portfolio</h4>
+                        <p>L'objectif est de créer un portfolio permettant de me faire connaître et de démontrer toutes mes compétences professionnelles.</p>
+                        <div class="projet-details">Détails</div>
+
+                        <dialog class="modale-projet">
+                            <div class="modale-contenu">
+                               <div class="modale-header">
+                                    <h3>Création d'un Portfolio</h3>
+                                    <span class="modale-contexte">Projet d'études - BUT 1 (2025-2026)</span>
+                                </div>
+
+                                <div class="modale-body">
+                                    <h4>Description</h4>
+                                    <p>Un portfolio est un espace (site web, médias social, etc.) contenant des exemples des ses réalisations. 
+                                        Il vise à démontrer ses compétences, dans un ou plusieurs domaines, par rapport à un objectif professionnel.</p>
+
+                                    <h4>Objectif du projet</h4>
+                                    <p>Développer un site web à des fins de communication. Il permet de répertorier et de démontrer toutes ses compétences professionnelles</p>
+
+                                    <h4>Technologies utilisées</h4>
+                                    <ul class="modale-techs">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JS</li>
+                                    </ul>
+
+                                    <h4>Défi technique</h4>
+                                    <p><strong>Difficulté :</strong> Trouver une direction artistique qui me ressemble.<br><br>
+                                    <strong>Solution :</strong> Passer beacoup de temps sur le projet et recommencer autant de fois que nécessaires</p>
+                                </div>
+                                
+                                <div class="modale-footer">
+                                    <a href="https://github.com/RedFox65/Portfolio.git" target="_blank" class="btn">Voir sur GitHub</a>
+                                    <button class="btn-fermer btn btn-outline">Fermer</button>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>
+
+                    <article class="portfolio-carte etudes">
+                        <div class="portfolio-img-placeholder" style="background-image: url('multimedias/images/sokobanV1.png');"></div>
+                        <h4>Le jeu du Sokoban</h4>
+                        <p>L’objectif pour le joueur est de réussir à positionner toutes les caisses sur les cibles avec le moins de déplacements possibles.</p>
+                        <div class="projet-details">Détails</div>
+
+                        <dialog class="modale-projet">
+                            <div class="modale-contenu">
+                               <div class="modale-header">
+                                    <h3>Le jeu du Sokoban</h3>
+                                    <span class="modale-contexte">Projet d'études - BUT 1 (2025-2026)</span>
+                                </div>
+
+                                <div class="modale-body">
+                                    <h4>Description</h4>
+                                    <p>Dans ce jeu, un personnage doit déplacer des caisses pour les ranger sur des positions cibles. Il peut se déplacer dans les quatre directions et pousser une seule caisse à la fois. 
+                                        L’objectif pour le joueur est de réussir à positionner toutes les caisses sur les cibles avec le moins de déplacements et de poussées possibles.</p>
+
+                                    <h4>Objectif du projet</h4>
+                                    <p>Développer le jeu de réflexion Sokoban en langage C. L'objectif étant d'appliquer nos connaissances dans ce langage de programmation, en algorithmique et en gestion de la mémoire.</p>
+
+                                    <h4>Technologies utilisées</h4>
+                                    <ul class="modale-techs">
+                                        <li>C</li>
+                                        <li>Git</li>
+                                    </ul>
+
+                                    <h4>Défi technique</h4>
+                                    <p><strong>Problème :</strong> La gestion de l'historique des coups pour permettre au joueur d'annuler une action (Ctrl+Z) consommait trop de mémoire.<br><br>
+                                    <strong>Solution :</strong> J'ai donc implémenté une structure de données en liste chaînée pour stocker uniquement les différences entre chaque déplacement plutôt que de sauvegarder toute la grille.</p>
+                                </div>
+                                
+                                <div class="modale-footer">
+                                    <!-- <a href="" target="_blank" class="btn">Voir sur GitHub</a> -->
+                                    <button class="btn-fermer btn btn-outline">Fermer</button>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>
+
+                    <article class="portfolio-carte etudes">
+                        <div class="portfolio-img-placeholder" style="background-image: url('multimedias/images/sokobanV2.png');"></div>
+                        <h4>Comparaison Algorithmiques</h4>
+                        <p>L’objectif de rendre autonome et intelligent le Sokoban en lui fournissant un plateau et une suite de déplacements à effectuer.</p>
+                        <div class="projet-details">Détails</div>
+                    
+                        <dialog class="modale-projet">
+                            <div class="modale-contenu">
+                               <div class="modale-header">
+                                    <h3>Comparaison Algorithmiques</h3>
+                                    <span class="modale-contexte">Projet d'études - BUT 1 (2025-2026)</span>
+                                </div>
+
+                                <div class="modale-body">
+                                    <h4>Description</h4>
+                                    <p>Dans sa première version, le programme du jeu Sokoban permettait à un joueur de pouvoir jouer une partie, c’est-à-dire exécuter se déplacer sur le plateau avec les caisses afin de les mettre au bon endroit.</p>
+
+                                    <h4>Objectif du projet</h4>
+                                    <p>Rendre autonome et intelligent le Sokoban en lui fournissant un plateau et une suite de déplacements à effectuer. Il doit aussi détecter si la suite constitue bien une solution et éliminer 
+                                        de la suite de déplacements toute séquence inutile.</p>
+
+                                    <h4>Technologies utilisées</h4>
+                                    <ul class="modale-techs">
+                                        <li>C</li>
+                                        <li>Git</li>
+                                    </ul>
+
+                                    <h4>Défi technique</h4>
+                                    <p><strong>Difficulté :</strong> Les séquences inutiles étaientt assez difficiles à détecter et à supprimer sans toucher aux déplacements valides.<br><br>
+                                    <strong>Solution :</strong> Pour cela, il a fallut chercher les combinaisons de déplacements inutiles possibles. Puis ensuite il a fallut trouver 
+                                                                des points identiques dans la façons de les résoudres, avant de rédiger l'algorithme qui permet de supprimer ces séquences inutiles.</p>
+                                </div>
+                                
+                                <div class="modale-footer">
+                                    <a href="https://github.com/RedFox65/Sokoban-Autonome.git" target="_blank" class="btn">Voir sur GitHub</a>
+                                    <button class="btn-fermer btn btn-outline">Fermer</button>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>
+
+                    <article class="portfolio-carte etudes">
+                        <div class="portfolio-img-placeholder" style="background-image: url('multimedias/images/docker.png');"></div>
+                        <h4>Installation d’un Poste de Développement avec Docker</h4>
+                        <p></p>
+                        <div class="projet-details">Détails</div>
+                    
+                        <dialog class="modale-projet">
+                            <div class="modale-contenu">
+                               <div class="modale-header">
+                                    <h3>Installation d’un Poste de Développement avec Docker</h3>
+                                    <span class="modale-contexte">Projet d'études - BUT 1 (2025-2026)</span>
+                                </div>
+
+                                <div class="modale-body">
+                                    <h4>Description</h4>
+                                    <p></p>
+
+                                    <h4>Objectif du projet</h4>
+                                    <p></p>
+
+                                    <h4>Technologies utilisées</h4>
+                                    <ul class="modale-techs">
+                                        <li>Bash</li>
+                                        <li>Docker</li>
+                                        <li>Git</li>
+                                    </ul>
+
+                                    <h4>Défi technique</h4>
+                                    <p><strong>Difficulté :</strong> <br><br>
+                                    <strong>Solution :</strong> </p>
+                                </div>
+                                
+                                <div class="modale-footer">
+                                    <a href="https://github.com/RedFox65/Docker.git" target="_blank" class="btn">Voir sur GitHub</a>
+                                    <button class="btn-fermer btn btn-outline">Fermer</button>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>
+
+                    <article class="portfolio-carte etudes">
+                        <div class="portfolio-img-placeholder" style="background-image: url('multimedias/images/postgresql-logo.png');"></div>
+                        <h4>Création d'une base de Données</h4>
+                        <p></p>
+                        <div class="projet-details">Détails</div>
+
+                        <dialog class="modale-projet">
+                            <div class="modale-contenu">
+                               <div class="modale-header">
+                                    <h3>Création d'une base de Données</h3>
+                                    <span class="modale-contexte">Projet d'études - BUT 1 (2025-2026)</span>
+                                </div>
+
+                                <div class="modale-body">
+                                    <h4>Description</h4>
+                                    <p></p>
+
+                                    <h4>Objectif du projet</h4>
+                                    <p></p>
+
+                                    <h4>Technologies utilisées</h4>
+                                    <ul class="modale-techs">
+                                        <li>Tutorial D</li>
+                                    </ul>
+
+                                    <h4>Défi technique</h4>
+                                    <p><strong>Difficulté :</strong> <br><br>
+                                    <strong>Solution :</strong> </p>
+                                </div>
+                                
+                                <div class="modale-footer">
+                                    <!-- <a href="" target="_blank" class="btn">Voir sur GitHub</a> -->
+                                    <button class="btn-fermer btn btn-outline">Fermer</button>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>
+
+                    <article class="portfolio-carte etudes">
+                        <div class="portfolio-img-placeholder" style="background-image: url('multimedias/images/html-css.png');"></div>
+                        <h4>Recueil des besoins d'un Client</h4>
+                        <p>L'objectif est de concevoir et développer un site web répondant aux besoins d'un client.</p>
+                        <div class="projet-details">Détails</div>
+
+                        <dialog class="modale-projet">
+                            <div class="modale-contenu">
+                               <div class="modale-header">
+                                    <h3>Recueil des besoins d'un Client</h3>
+                                    <span class="modale-contexte">Projet d'études - BUT 1 (2025-2026)</span>
+                                </div>
+
+                                <div class="modale-body">
+                                    <h4>Description</h4>
+                                    <p></p>
+
+                                    <h4>Objectif du projet</h4>
+                                    <p></p>
+
+                                    <h4>Technologies utilisées</h4>
+                                    <ul class="modale-techs">
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>Git</li>
+                                    </ul>
+
+                                    <h4>Défi technique</h4>
+                                    <p><strong>Difficulté :</strong> <br><br>
+                                    <strong>Solution :</strong> </p>
+                                </div>
+                                
+                                <div class="modale-footer">
+                                    <a href="https://github.com/alexisnotalex/canada.git" target="_blank" class="btn">Voir sur GitHub</a>
+                                    <button class="btn-fermer btn btn-outline">Fermer</button>
+                                </div>
+                            </div>
+                        </dialog>
+                    </article>
+                </div>
             </section>
 
             <section id="contacter">
                 <div class="spacer-menu"></div>
-                <h3>Me contacter</h3>
+                <h3 class="titre">Me contacter</h3>
 
-                <address>mon email : clement.coirier@etudiant.univ-rennes.fr</address>
-                <button>Téléchager ici mon CV</button>
-                <button>Où me trouver</button>
+                <div class="contact-container">
+                    <div class="contact-infos">
+                        <p>N'hésitez pas à me contacter pour un service, une opportunité d'alternance, de stage ou simplement pour échanger !</p>
+                        <address>Email : <a href="mailto:clement.coirier@etudiant.univ-rennes.fr">clement.coirier@etudiant.univ-rennes.fr</a></address>
+                        <div class="contact-boutons">
+                            <a href="multimedias/CV_Coirier.pdf" download class="btn">Télécharger mon CV</a>
+                            <button class="btn btn-outline">Où me trouver</button>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <input type="text" placeholder="Votre nom" required>
+                        <input type="email" placeholder="Votre adresse email" required>
+                        <textarea placeholder="Votre message..." rows="5" required></textarea>
+                        <button type="submit" class="btn">Envoyer</button>
+                    </form>
+                </div>
             </section>
         </main>
         

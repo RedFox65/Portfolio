@@ -69,16 +69,20 @@ h3 {
 }
 
 
-h1::before, h1::after, h3::before, h3::after {
+.titre::before, .titre::after {
     content: " ~ ";
     color: darkgrey;
 }
 
 
+span {
+    font-weight: bold;
+}
 
 
-
-/* NAV BAR */
+/* =========================
+   NAV BAR 
+========================= */
 
 @keyframes rotationFleche {
     0% {
@@ -116,6 +120,7 @@ nav {
     top: 0;
     background-color: #FFFFFF;
     height: 48px;
+    z-index: 10;
 }
 
 
@@ -232,7 +237,9 @@ nav > ul > li > a > img {
 }
 
 
-/* HEADER */
+/* =========================
+   HEADER 
+========================= */
 
 header {
     margin-top: 14em;
@@ -263,7 +270,9 @@ header > h2 {
 }
 
 
-/* MAIN */
+/* =========================
+   MAIN 
+========================= */
 
 main {
     background-color: #FFFFFF;
@@ -271,7 +280,9 @@ main {
 }
 
 
-/* SECTION A-PROPOS */
+/* =========================
+   SECTION A PROPOS 
+========================= */
 
 #a-propos > div {
     display: flex;
@@ -297,7 +308,7 @@ main {
 }
 
 
-#a-propos > div ul {
+.a-propos-filtres {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -306,7 +317,7 @@ main {
 }
 
 
-#a-propos > div ul > li {
+.a-propos-filtres li {
     margin: 2px;
     border: solid 3px #F0F0F0;
     border-radius: 20px;
@@ -317,15 +328,13 @@ main {
 }
 
 
-#a-propos > div article > p {
-    text-align: justify;
-    margin: 4px;
-    padding: 4px;
+.a-propos-filtres li:hover {
+    background-color: #F0F0F0;
 }
 
 
-#a-propos > div ul > li:hover {
-    background-color: #F0F0F0;
+.a-propos-filtres li.active {
+  border: 2px solid black;
 }
 
 
@@ -340,8 +349,10 @@ main {
 }
 
 
-#a-propos li.active {
-  border: 2px solid black;
+#a-propos > div article > p {
+    text-align: justify;
+    margin: 4px;
+    padding: 4px;
 }
 
 
@@ -378,12 +389,9 @@ main {
 }
 
 
-#passions {
-
-}
-
-
-/* SECTION COMPÉTENCES */
+/* =========================
+   SECTION COMPÉTENCES 
+========================= */
 
 @keyframes progressBar {
     0% {
@@ -480,24 +488,332 @@ main {
     padding-bottom: 2em;
 }
 
-#competences-temporaires > p {
+
+#competences-temporaires p {
     padding-bottom: 1em;
 }
 
 
-/* SECTION DIPLOMES */
-.time-line {
-    background-color: #F0F0F0;
-    display: block;
-    width: 12px;
-    height: 10em;
-    border-radius: 15px 0;
-    margin-top: 2em;
-    margin-left: 42em;
+/* =========================
+   SECTION DIPLOMES 
+========================= */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    margin: 3em auto;
+    width: 60%;
+    border-left: 4px solid #F0F0F0;
+    padding-left: 20px;
 }
 
 
-/* SECTION PORTFOLIO */
+.timeline-item {
+    position: relative;
+    margin-bottom: 2em;
+}
 
 
-/* SECTION CONTACTER */
+.timeline-dot {
+    position: absolute;
+    left: -29px; /* Centrer sur la bordure */
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background-color: #000000;
+    border-radius: 50%;
+}
+
+
+.timeline-date {
+    font-weight: bold;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+
+.timeline-content {
+    background-color: #F0F0F0;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+
+/* =========================
+   SECTION PORTFOLIO 
+========================= */
+#portfolio {
+    background-color: #F0F0F0;
+    border-radius: 0 3em 0 3em;
+    padding-bottom: 3px;
+}
+
+
+.portfolio-filtres {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 2em 0;
+}
+
+
+.portfolio-filtres li {
+    cursor: pointer;
+    padding: 5px 15px;
+    border-radius: 15px;
+    border: solid 3px #FAFAFA;
+    font-size: 20px;
+}
+
+
+.portfolio-filtres li:hover {
+    background-color: #FAFAFA;
+}
+
+
+.portfolio-filtres li.active {
+    border: 2px solid black;
+}
+
+
+.portfolio-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 5em;
+}
+
+
+.portfolio-carte {
+    width: 300px;
+    background-color: #FAFAFA;
+    /* border: 1px solid #000000; */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+
+.portfolio-carte:hover {
+    transform: scale(1.05);
+}
+
+
+.portfolio-img-placeholder {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    /* background-color: darkgrey;
+    color: white; */
+}
+
+
+.portfolio-carte h4, .portfolio-carte p {
+    padding: 10px 15px;
+}
+
+
+.projet-details {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin: 5px 20px 10px 0;
+    color: blue;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   FENÊTRE MODALE
+========================= */
+.modale-projet {
+    margin: auto; /* Centre automatiquement à l'écran */
+    padding: 2em;
+    border: none;
+    border-radius: 15px;
+    background-color: #F0F0F0;
+    max-width: 720px;
+    height: 720px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Le fond assombri derrière la modale */
+.modale-projet::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.modale-contenu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Pour enlever les marges par défaut si besoin */
+.modale-contenu h3 {
+    margin-bottom: 1em;
+}
+
+
+.modale-contenu p {
+    margin-bottom: 2em;
+    line-height: 1.5;
+}
+
+
+.modale-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+.modale-header h3 {
+    margin-bottom: 5px;
+    margin-left: 0;
+}
+
+
+.modale-contexte {
+    font-style: italic;
+    color: #555555;
+    font-size: 16px;
+}
+
+
+.modale-body h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: monospace;
+    font-size: 20px;
+}
+
+
+/* Style des technologies */
+.modale-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+
+.modale-techs li {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* Pied de la modale avec les boutons */
+.modale-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    border-top: 2px solid #DDDDDD;
+    padding-top: 20px;
+    width: 100%;
+}
+
+
+.btn-fermer {
+    margin-left: auto;
+}
+
+
+/* =========================
+   SECTION CONTACTER 
+========================= */
+.contact-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 3em 0 5em 0;
+    gap: 40px;
+}
+
+
+.contact-infos {
+    width: 40%;
+}
+
+
+.contact-infos p, .contact-infos address {
+    margin-bottom: 1.5em;
+    line-height: 1.5;
+}
+
+
+.contact-boutons {
+    display: flex;
+    gap: 15px;
+}
+
+
+.btn {
+    background-color: #000000;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+
+.btn:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+
+.btn-outline {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+
+.btn-outline:hover {
+    background-color: #F0F0F0;
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 15px;
+}
+
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #F0F0F0;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: #000000;
+}
