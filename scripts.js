@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const filtrerCartes = (categorie) => {
     cartes.forEach(carte => {
       if (carte.classList.contains(categorie)) {
-        carte.style.display = "block";
+        carte.style.display = "flex";
       } else {
         carte.style.display = "none";
       }
