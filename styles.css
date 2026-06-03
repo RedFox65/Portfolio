@@ -335,8 +335,8 @@ main {
     display: none;
     background-color: #F0F0F0;
     width: 780px;
-    height: 310px;
-    padding-top: 5px;
+    /* height: 310px; */
+    /* padding-top: 5px; */
     border-radius: 15px;
     box-shadow: 0 0 10px 10px #F0F0F0;
 }
@@ -344,8 +344,8 @@ main {
 
 #a-propos > div article > p {
     text-align: justify;
-    margin: 4px;
-    padding: 4px;
+    margin: 5px;
+    padding: 5px;
 }
 
 
@@ -360,7 +360,7 @@ main {
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
-    margin-top: 3em;
+    margin: 2em 0;
 }
 
 
@@ -377,8 +377,23 @@ main {
 }
 
 
-#softskills p {
-    margin-top: 1em !important;
+#softskills p:first-child {
+    margin-top: 10px;
+}
+
+
+#softskills p:last-child {
+    margin-bottom: 10px;
+}
+
+
+#passions p:first-child {
+    margin-top: 10px;
+}
+
+
+#passions p:last-child {
+    margin-bottom: 10px;
 }
 
 
@@ -520,6 +535,7 @@ main {
 /* =========================
    SECTION DIPLOMES 
 ========================= */
+
 .timeline-container {
     display: flex;
     flex-direction: column;
@@ -564,6 +580,7 @@ main {
 /* =========================
    SECTION PORTFOLIO 
 ========================= */
+
 #portfolio {
     background-color: #F0F0F0;
     border-radius: 0 3em 0 3em;
@@ -649,9 +666,15 @@ main {
 }
 
 
+.projet-details:hover {
+    text-decoration: underline;
+}
+
+
 /* =========================
    CAROUSEL
 ========================= */
+
 /* Conteneur global (sert de repère absolute pour les flèches) */
 .carousel-wrapper {
     position: relative;
@@ -704,6 +727,7 @@ main {
 /* =========================
    FENÊTRE MODALE
 ========================= */
+
 .modale-projet {
     margin: auto; /* Centre automatiquement à l'écran */
     padding: 2em;
@@ -814,6 +838,7 @@ main {
 /* =========================
    SECTION CONTACTER 
 ========================= */
+
 .contact-container {
     display: flex;
     justify-content: space-evenly;
@@ -895,6 +920,7 @@ main {
 /* =========================
    FOOTER 
 ========================= */
+
 footer {
     display: flex;
     justify-content: center;

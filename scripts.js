@@ -250,7 +250,8 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault(); 
       
       // Petit message pour valider que le clic fonctionne
-      alert("Merci pour ton message ! L'interface est prête. (Pour que l'email parte vraiment, il faudra lier ce formulaire à un script PHP ou une API comme Formspree par la suite).");
+      alert("Merci pour ton message !")
+      // L'interface est prête. (Pour que l'email parte vraiment, il faudra lier ce formulaire à un script PHP ou une API comme Formspree par la suite).");
       
       // Vide les champs du formulaire après "l'envoi"
       formulaire.reset(); 
