@@ -819,6 +819,11 @@ main {
 }
 
 
+.lien-competence {
+    text-decoration: underline;
+}
+
+
 /* Pied de la modale avec les boutons */
 .modale-footer {
     display: flex;
@@ -856,6 +861,11 @@ main {
 .contact-infos p, .contact-infos address {
     margin-bottom: 1.5em;
     line-height: 1.5;
+}
+
+
+.contact-infos address a {
+    text-decoration: underline;
 }
 
 
@@ -923,7 +933,7 @@ main {
 
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: #353535;
     color: #FFFFFF;
@@ -931,6 +941,7 @@ footer {
 }
 
 
-.contact-infos address a {
+.liens-iut {
+    font-size: 16px;
     text-decoration: underline;
 }
